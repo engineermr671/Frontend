@@ -7,16 +7,13 @@ export default function Nav() {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
 
   const menuItems = [
-    "Profile",
-    "Dashboard",
-    "Activity",
-    "Analytics",
-    "System",
-    "Deployments",
-    "My Settings",
-    "Team Settings",
-    "Help & Feedback",
-    "Log Out",
+    "Home",
+    "About Us",
+    "Course",
+    "Contact Us",
+    "Login",
+    "Register",
+
   ];
 
   return (
@@ -35,19 +32,25 @@ export default function Nav() {
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
         <NavbarItem>
           <Link color="foreground" href="#">
-            Features
+          Home
           </Link>
         </NavbarItem>
         <NavbarItem isActive>
           <Link href="#" aria-current="page">
-            Customers
+          About Us
           </Link>
         </NavbarItem>
         <NavbarItem>
           <Link color="foreground" href="#">
-            Integrations
+          Course
           </Link>
         </NavbarItem>
+        <NavbarItem>
+          <Link color="foreground" href="#">
+          Contact Us
+          </Link>
+        </NavbarItem>
+        
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem className="hidden lg:flex">
@@ -55,7 +58,7 @@ export default function Nav() {
         </NavbarItem>
         <NavbarItem>
           <Button as={Link} color="primary" href="#" variant="flat">
-            Sign Up
+            Register
           </Button>
         </NavbarItem>
       </NavbarContent>
